@@ -13,8 +13,9 @@ window.MathJax = {
   },
 };
 
-document.addEventListener("readystatechange", () => {
-  if (document.readyState === "complete") {
+// Wait for the math engine, not unrelated images or embedded comments.
+document.addEventListener("DOMContentLoaded", () => {
+  window.MathJax.startup.promise.then(() => {
     const blocks = document.querySelectorAll("pre>code.language-pseudocode");
     if (!blocks.length) return;
     blocks.forEach((elem) => {
@@ -33,5 +34,5 @@ document.addEventListener("readystatechange", () => {
     });
     // pseudocode.js converts math after initial typesetting; include its new glyphs.
     window.MathJax.chtmlStylesheet?.();
-  }
-});
+  });
+}, { once: true });

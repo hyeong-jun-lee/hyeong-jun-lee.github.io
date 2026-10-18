@@ -6,7 +6,7 @@ import { readText } from "./helpers/site-files.mjs";
 
 function setup(blockCount) {
   const events = [];
-  let onReady;
+  const listeners = new Map();
   const parent = { appendChild() {}, removeChild() {} };
   const blocks = Array.from({ length: blockCount }, (_, index) => ({
     textContent: `algorithm ${index}`,
@@ -14,7 +14,7 @@ function setup(blockCount) {
   }));
   const document = {
     readyState: "loading",
-    addEventListener(name, callback) { onReady = callback; },
+    addEventListener(name, callback) { listeners.set(name, callback); },
     querySelectorAll() { return blocks; },
     createElement() { return { classList: { add() {} }, appendChild() {} }; },
     createTextNode(text) { return { textContent: text }; },
@@ -25,21 +25,38 @@ function setup(blockCount) {
     pseudocode: { renderElement() { events.push("render"); } },
   });
   window.MathJax.chtmlStylesheet = () => events.push("refresh glyph CSS");
-  return { document, events, ready: () => onReady() };
+  let finishMath;
+  window.MathJax.startup = { promise: new Promise((resolve) => { finishMath = resolve; }) };
+  return {
+    document, events,
+    fire: (name) => listeners.get(name)?.(),
+    finishMath: async () => { finishMath(); await window.MathJax.startup.promise; },
+  };
 }
 
-test("refreshes MathJax glyph styles after all late-rendered pseudocode blocks", () => {
+test("renders pseudocode after DOM and MathJax readiness without waiting for all page resources", async () => {
   const page = setup(2);
-  page.ready();
+  page.document.readyState = "interactive";
+  page.fire("DOMContentLoaded");
   assert.deepEqual(page.events, []);
-  page.document.readyState = "complete";
-  page.ready();
+  await page.finishMath();
   assert.deepEqual(page.events, ["render", "render", "refresh glyph CSS"]);
 });
 
-test("does not refresh MathJax styles when there is no pseudocode block", () => {
+test("does not refresh MathJax styles when there is no pseudocode block", async () => {
   const page = setup(0);
-  page.document.readyState = "complete";
-  page.ready();
+  page.document.readyState = "interactive";
+  page.fire("DOMContentLoaded");
+  await page.finishMath();
   assert.deepEqual(page.events, []);
+});
+
+test("the final page load does not render pseudocode a second time", async () => {
+  const page = setup(2);
+  page.document.readyState = "interactive";
+  page.fire("DOMContentLoaded");
+  await page.finishMath();
+  page.document.readyState = "complete";
+  page.fire("readystatechange");
+  assert.deepEqual(page.events, ["render", "render", "refresh glyph CSS"]);
 });
