@@ -37,7 +37,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-hg-dagger-interactive-imitation-learning-with-human-experts",
+        },{id: "post-learning-from-interventions-human-robot-interaction-as-both-explicit-and-implicit-feedback",
+        
+          title: "Learning from Interventions: Human-robot interaction as both explicit and implicit feedback",
+        
+        description: "개입 여부와 복구 행동을 함께 활용하는 모방학습 방법 EIL 리뷰",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/eil/";
+          
+        },
+      },{id: "post-hg-dagger-interactive-imitation-learning-with-human-experts",
         
           title: "HG-DAgger: Interactive Imitation Learning with Human Experts",
         
