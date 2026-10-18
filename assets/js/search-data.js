@@ -37,7 +37,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-learning-from-interventions-human-robot-interaction-as-both-explicit-and-implicit-feedback",
+        },{id: "post-mile-model-based-intervention-learning",
+        
+          title: "MILE: Model-based Intervention Learning",
+        
+        description: "인간의 개입 판단을 모델링하는 모방학습 방법 MILE 리뷰",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/mile/";
+          
+        },
+      },{id: "post-learning-from-interventions-human-robot-interaction-as-both-explicit-and-implicit-feedback",
         
           title: "Learning from Interventions: Human-robot interaction as both explicit and implicit feedback",
         
@@ -123,17 +134,6 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/blog/2026/mldg/";
-          
-        },
-      },{id: "post-paper-review-mile-model-based-intervention-learning",
-        
-          title: "[Paper Review] MILE: Model-based Intervention Learning",
-        
-        description: "개입과 비개입 데이터를 함께 활용하는 model-based intervention learning",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2026/mile/";
           
         },
       },{id: "post-paper-review-maml-model-agnostic-meta-learning",
