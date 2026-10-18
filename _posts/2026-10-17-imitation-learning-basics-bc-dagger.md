@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Imitation Learning 기초: Behavioral Cloning부터 DAgger까지"
-description: "Behavioral Cloning의 분포 변화와 오차 누적에서 DAgger의 데이터 누적, no-regret 성능 보장과 원논문 실험까지"
+description: "Behavioral Cloning과 DAgger의 정의 및 분석"
 date: 2026-10-17 17:15:00 +0900
 permalink: /blog/2026/dagger/
 tags: [paper review, imitation learning, behavioral cloning, distribution shift, dataset aggregation]
