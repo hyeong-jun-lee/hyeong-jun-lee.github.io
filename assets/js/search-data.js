@@ -50,7 +50,7 @@ ninja.data = [{
         },
       },{id: "post-imitation-learning-기초-behavioral-cloning부터-dagger까지",
         
-          title: "[Imitation Learning] 기초: Behavioral Cloning부터 DAgger까지",
+          title: "Imitation Learning 기초: Behavioral Cloning부터 DAgger까지",
         
         description: "Behavioral Cloning의 분포 변화와 오차 누적에서 DAgger의 데이터 누적, no-regret 성능 보장과 원논문 실험까지",
         section: "Posts",
