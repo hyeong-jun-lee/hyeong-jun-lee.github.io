@@ -37,9 +37,9 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-imitation-learning-hg-dagger-인간의-개입으로-배우는-모방학습",
+        },{id: "post-hg-dagger-interactive-imitation-learning-with-human-experts",
         
-          title: "[Imitation Learning] HG-DAgger: 인간의 개입으로 배우는 모방학습",
+          title: "HG-DAgger: Interactive Imitation Learning with Human Experts",
         
         description: "EnsembleDAgger의 제어권 선택에서 HG-DAgger의 복구 시연, 개입 시점의 불확실성과 자율주행 실험까지",
         section: "Posts",
