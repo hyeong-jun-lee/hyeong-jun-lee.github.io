@@ -37,7 +37,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-imitation-learning-기초-behavioral-cloning부터-dagger까지",
+        },{id: "post-imitation-learning-hg-dagger-인간의-개입으로-배우는-모방학습",
+        
+          title: "[Imitation Learning] HG-DAgger: 인간의 개입으로 배우는 모방학습",
+        
+        description: "EnsembleDAgger의 제어권 선택에서 HG-DAgger의 복구 시연, 개입 시점의 불확실성과 자율주행 실험까지",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/hg-dagger/";
+          
+        },
+      },{id: "post-imitation-learning-기초-behavioral-cloning부터-dagger까지",
         
           title: "[Imitation Learning] 기초: Behavioral Cloning부터 DAgger까지",
         
@@ -134,17 +145,6 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/blog/2026/iarl/";
-          
-        },
-      },{id: "post-paper-review-hg-dagger-interactive-imitation-learning-with-human-experts",
-        
-          title: "[Paper Review] HG-DAgger: Interactive Imitation Learning with Human Experts",
-        
-        description: "Human-gated supervision을 이용한 interactive imitation learning",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2026/hg-dagger/";
           
         },
       },{id: "post-paper-review-haco-human-ai-copilot-optimization",
