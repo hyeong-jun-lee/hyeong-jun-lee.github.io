@@ -13,7 +13,7 @@ const reviewPosts = new Map([
   ["2026-10-17-imitation-learning-basics-bc-dagger.md", ["imitation and intervention learning", "https://proceedings.mlr.press/v15/ross11a.html"]],
   ["2026-10-18-hg-dagger.md", ["imitation and intervention learning", "https://arxiv.org/abs/1810.02890"]],
   ["2026-10-19-eil.md", ["imitation and intervention learning", "https://roboticsproceedings.org/rss16/p055.html"]],
-  ["2026-10-15-mile.md", ["imitation and intervention learning", "https://arxiv.org/abs/2502.13519"]],
+  ["2026-10-19-mile.md", ["imitation and intervention learning", "https://arxiv.org/abs/2502.13519"]],
   ["2026-10-15-optnet.md", ["optimization", "https://proceedings.mlr.press/v70/amos17a.html"]],
   ["2026-10-15-haco.md", ["imitation and intervention learning", "https://arxiv.org/abs/2202.10341"]],
   ["2026-10-15-pvp.md", ["imitation and intervention learning", "https://papers.neurips.cc/paper_files/paper/2023/hash/f57ffe47d0b528fbb97901d16bd4eba2-Abstract-Conference.html"]],
