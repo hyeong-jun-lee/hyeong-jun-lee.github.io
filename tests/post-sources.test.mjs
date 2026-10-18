@@ -11,7 +11,7 @@ const removedPosts = [
 
 const reviewPosts = new Map([
   ["2026-10-17-imitation-learning-basics-bc-dagger.md", ["imitation and intervention learning", "https://proceedings.mlr.press/v15/ross11a.html"]],
-  ["2026-10-15-hg-dagger.md", ["imitation and intervention learning", "https://arxiv.org/abs/1810.02890"]],
+  ["2026-10-18-hg-dagger.md", ["imitation and intervention learning", "https://arxiv.org/abs/1810.02890"]],
   ["2026-10-15-mile.md", ["imitation and intervention learning", "https://arxiv.org/abs/2502.13519"]],
   ["2026-10-15-optnet.md", ["optimization", "https://proceedings.mlr.press/v70/amos17a.html"]],
   ["2026-10-15-haco.md", ["imitation and intervention learning", "https://arxiv.org/abs/2202.10341"]],
